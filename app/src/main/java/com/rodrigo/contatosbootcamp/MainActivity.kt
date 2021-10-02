@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity(){
 
    // @SuppressLint("MissingSuperCall")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        if (requestCode == REQUEST_CONTACT) setContacts()
+       super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+       if (requestCode == REQUEST_CONTACT) setContacts()
     }
 
     private fun setContacts() {
